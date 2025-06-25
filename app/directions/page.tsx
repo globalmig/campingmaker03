@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function DirectionsPage() {
@@ -28,11 +29,11 @@ export default function DirectionsPage() {
 
                 <div className="display-flex">
                     <button className="display-flex">
-                        <img src="icons/icon_location.png"/>
+                        <Image src="icons/icon_location.png" alt="길찾기"/>
                         <Link href="https://naver.me/GMmr08Lg">길찾기</Link>
                     </button>
                     <button className="display-flex">
-                        <img src="icons/icon_map.png"/>
+                        <Image src="icons/icon_map.png" alt="지도에서보기"/>
                         <Link href="https://naver.me/GMmr08Lg">지도에서 보기</Link>
                     </button>
                 </div>
@@ -40,7 +41,7 @@ export default function DirectionsPage() {
                 <div className="display-flex-flow">
                     <div>
                         <div className="display-flex direction-icon">
-                            <img src="/icons/icon_location_2.png" alt="오시는길 아이콘" />
+                            <Image src="/icons/icon_location_2.png" alt="오시는길 아이콘" />
                             <p>오시는 길</p>
                         </div>
                         <div>
@@ -53,7 +54,7 @@ export default function DirectionsPage() {
                     </div>
                     <div>
                         <div className="display-flex direction-icon">
-                            <img src="/icons/icon_tel_2.png" alt="전화번호 아이콘" />
+                            <Image src="/icons/icon_tel_2.png" alt="전화번호 아이콘" />
                             <p>전화번호</p>
                         </div>
                         <ul>
@@ -63,7 +64,7 @@ export default function DirectionsPage() {
                     </div>
                     <div>
                         <div className="display-flex direction-icon">
-                            <img src="/icons/icon_time.png" alt="이용시간 아이콘" />
+                            <Image src="/icons/icon_time.png" alt="이용시간 아이콘" />
                             <p>이용시간</p>
                         </div>
                         <div className="display-flex">
@@ -79,28 +80,28 @@ export default function DirectionsPage() {
                     </div>
                     <div>
                         <div className="display-flex direction-icon">
-                            <img src="/icons/icon_notice.png" alt="이용안내 아이콘" />
+                            <Image src="/icons/icon_notice.png" alt="이용안내 아이콘" />
                             <p>이용안내</p>
                         </div>
                         <div className="display-flex-flow direction-notice">
                             <section>
-                                <img src="icons/icon_directions_1.png" />
+                                <Image src="icons/icon_directions_1.png" alt="예약"/>
                                 <p>예약</p>
                             </section>
                             <section>
-                                <img src="icons/icon_directions_2.png" />
+                                <Image src="icons/icon_directions_2.png" alt="주차"/>
                                 <p>주차</p>
                             </section>
                             <section>
-                                <img src="icons/icon_directions_3.png" />
+                                <Image src="icons/icon_directions_3.png" alt="발렛파킹"/>
                                 <p>발렛파킹</p>
                             </section>
                             <section>
-                                <img src="icons/icon_directions_4.png" />
+                                <Image src="icons/icon_directions_4.png" alt="무선인터넷"/>
                                 <p>무선인터넷</p>
                             </section>
                             <section>
-                                <img src="icons/icon_directions_5.png" />
+                                <Image src="icons/icon_directions_5.png" alt="애완동물 동반"/>
                                 <p>애완동물 동반</p>
                             </section>
                         </div>

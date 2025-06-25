@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -49,9 +49,9 @@ export default function InquiryItem({ data, index }: InquiryItemProps) {
           <p className="item-number">{index }</p>
         </div>
         <div className="display-flex lock-item">
-          <img src="/icons/icon_lock.png" alt="비밀글" className="mo" />
+          <Image src="/icons/icon_lock.png" alt="비밀글" className="mo" />
           <a href={`/inquiry/detail/${data._id}`} onClick={onClickTitle}>{data.title}</a>
-          <img src="/icons/icon_lock.png" alt="비밀글" className="pc" />
+          <Image src="/icons/icon_lock.png" alt="비밀글" className="pc" />
         </div>
         <div className="pc item-name">
           <p>{data.name[0] + '*'.repeat(data.name.length - 1)}</p>
@@ -64,7 +64,7 @@ export default function InquiryItem({ data, index }: InquiryItemProps) {
             day: '2-digit',
           })}</p>
           <div className="display-flex mo comment-box">
-            <img src="/icons/icon_talk_white.png" alt="댓글 아이콘" />
+            <Image src="/icons/icon_talk_white.png" alt="댓글 아이콘" />
             <p className="comment-count">댓글수</p>
           </div>
         </div>

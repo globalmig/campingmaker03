@@ -2,6 +2,7 @@
 import Layout from "@/components/Layout";
 import YoutubeItem from "@/components/YoutubeItem";
 import { youtubeList } from "@/data/youtubeList";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function YoutubePage() {
@@ -23,7 +24,7 @@ export default function YoutubePage() {
                 {youtubeCount < youtubeList.length && (
                     <div className="button-wrapper">
                         <button className="contents-more" onClick={youtubeMoreClick}>
-                            <img src="/icons/more_button.png" />
+                            <Image src="/icons/more_button.png" alt="더보기" />
                         </button>
                     </div>
                 )}

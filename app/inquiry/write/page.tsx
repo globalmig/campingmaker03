@@ -3,6 +3,7 @@
 import { ChangeEvent, useCallback, useState } from "react";
 import InquiryForm from "@/components/InquiryForm";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function InquiryAskPage() {
   const [form, setForm] = useState({
@@ -66,8 +67,8 @@ export default function InquiryAskPage() {
 
   return (
     <article className="inquiry-write">
-      <img className='mo' src="/images/common_banner_mo.png" alt='배너' />
-      <img className='pc' src="/images/common_banner.png" alt='배너' />
+      <Image className='mo' src="/images/common_banner_mo.png" alt='배너' />
+      <Image className='pc' src="/images/common_banner.png" alt='배너' />
       <div>
         <h3>견적 및 문의</h3>
         <InquiryForm

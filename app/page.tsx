@@ -4,9 +4,10 @@ import "./style.css";
 import "./mainVisual.css";
 import "./main_visual.js";
 import MainVisual from "@/components/Mainvisual";
+import Image from "next/image";
 
 export default function Home() {
-  const wrapRefs = useRef<NodeListOf<HTMLDivElement>>();
+const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
 
   // Resize + height 설정
   const setHeights = () => {
@@ -127,11 +128,6 @@ export default function Home() {
     <>
       <main>
         <MainVisual />
-        {/* <img
-          src="/images/main_banner_title.png"
-          alt="캠핑메이커, 또 다른 내일을 상상합니다."
-        />
-        <img src="/images/main_banner.png" alt="메인배너" /> */}
       </main>
 
       <div className="main-contents">
@@ -309,9 +305,9 @@ export default function Home() {
             <section className="social-media-up">
               <div className="media-image">
                 <a href="">
-                  <img src="/icons/icon_video.png" />
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
                 </a>
-                <img
+                <Image
                   src="/images/social_media_1.png"
                   alt="새로운 느낌의 캠핑카"
                 />
@@ -329,10 +325,8 @@ export default function Home() {
                 <p>새로운 방식의 가죽형 캠핑카가 어떻게 진행될까요?</p>
               </div>
               <div className="media-image">
-                <a href="">
-                  <img src="/icons/icon_video.png" />
-                </a>
-                <img
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
+                <Image
                   src="/images/social_media_2.png"
                   alt="새로운 느낌의 캠핑카"
                 />
@@ -340,10 +334,8 @@ export default function Home() {
             </section>
             <section className="social-media-up">
               <div className="media-image">
-                <a href="">
-                  <img src="/icons/icon_video.png" />
-                </a>
-                <img
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
+                <Image
                   src="/images/social_media_3.png"
                   alt="새로운 느낌의 캠핑카"
                 />
@@ -364,10 +356,8 @@ export default function Home() {
                 <p>넓고 높은 다마스 캠핑카</p>
               </div>
               <div className="media-image">
-                <a href="">
-                  <img src="/icons/icon_video.png" />
-                </a>
-                <img
+                <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
+                <Image
                   src="/images/social_media_4.png"
                   alt="새로운 느낌의 캠핑카"
                 />
@@ -375,10 +365,8 @@ export default function Home() {
             </section>
             <section className="social-media-up">
               <div className="media-image">
-                <a href="">
-                  <img src="/icons/icon_video.png" />
-                </a>
-                <img
+               <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
+                <Image
                   src="/images/social_media_5.png"
                   alt="새로운 느낌의 캠핑카"
                 />
@@ -396,10 +384,8 @@ export default function Home() {
                 <p>패브릭 감성을 더한 스타리아 캠핑카</p>
               </div>
               <div className="media-image">
-                <a href="">
-                  <img src="/icons/icon_video.png" />
-                </a>
-                <img
+                <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
+                <Image
                   src="/images/social_media_6.png"
                   alt="새로운 느낌의 캠핑카"
                 />

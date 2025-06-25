@@ -1,4 +1,4 @@
-import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface IPaginationProps {
@@ -14,7 +14,6 @@ export default function Pagination({
   setStartPage,
   currentPage,
 }: IPaginationProps) {
-  const router = useRouter();
 
   const [pageCount, setPageCount] = useState(Math.ceil(dataCount / dataPerPage));
   const [groupStartPage, setGroupStartPage] = useState(1);
@@ -64,7 +63,7 @@ export default function Pagination({
   return (
     <div className="pagination display-flex">
       <button onClick={onClickPrevPage}>
-        <img src="/icons/icon_arrow_prev.png" alt="이전 버튼"/>
+        <Image src="/icons/icon_arrow_prev.png" alt="이전 버튼"/>
       </button>
       <div>
         {pages.map((page) => (
@@ -82,7 +81,7 @@ export default function Pagination({
         ))}
       </div>
       <button onClick={onClickNextPage}>
-        <img src="/icons/icon_arrow_next.png" alt="다음 버튼"/>
+        <Image src="/icons/icon_arrow_next.png" alt="다음 버튼"/>
       </button>
     </div>
   );

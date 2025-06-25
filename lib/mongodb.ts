@@ -14,6 +14,7 @@ interface MongooseGlobalCache {
 
 // NodeJS 글로벌 객체 확장
 declare global {
+  // eslint-disable-next-line no-var
   var mongoose: MongooseGlobalCache | undefined;
 }
 

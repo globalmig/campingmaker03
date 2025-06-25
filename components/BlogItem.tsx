@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 type BlogItemProps = {
@@ -17,7 +18,7 @@ export default function BlogItem({ title, contents, img, date, link }: BlogItemP
                 <p>네이버 블로그 <span>{date}</span></p>
             </Link>
             <div>
-            <img src={img}/>
+            <Image src={img} alt="블로그 썸네일"/>
             </div>
         </section>
     )

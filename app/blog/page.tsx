@@ -3,6 +3,7 @@ import { useState } from "react";
 import BlogItem from "@/components/BlogItem";
 import Layout from "@/components/Layout";
 import { blogList } from "@/data/blogList";
+import Image from "next/image";
 
 export default function BlogPage() {
     const [blogCount, setBlogCount] = useState(10);
@@ -29,7 +30,7 @@ export default function BlogPage() {
                 {blogCount < blogList.length && (
                     <div className="button-wrapper">
                         <button className="contents-more" onClick={blogMoreClick}>
-                            <img src="/icons/more_button.png" />
+                            <Image src="/icons/more_button.png" alt="더보기"/>
                         </button>
                     </div>
                 )}

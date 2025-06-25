@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -13,7 +14,7 @@ export default function Header() {
         <header>
             <div className="display-flex">
                 <Link href="/">
-                    <img src="/icons/logo.png" alt="홈" />
+                    <Image src="/icons/logo.png" alt="홈" />
                 </Link>
                 <div className="display-flex">
                     <ul className="pc display-flex">

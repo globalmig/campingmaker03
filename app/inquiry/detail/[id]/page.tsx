@@ -3,6 +3,7 @@ import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface InquiryDetail {
   _id: string;
@@ -81,8 +82,8 @@ export default function InquiryDetailPage() {
 
   return (
     <article className="inquiry-detail">
-      <img className="mo" src="/images/common_banner_mo.png" alt="배너" />
-      <img className="pc" src="/images/common_banner.png" alt="배너" />
+      <Image className="mo" src="/images/common_banner_mo.png" alt="배너" />
+      <Image className="pc" src="/images/common_banner.png" alt="배너" />
       <div>
         {data ? <>
         <h3>{data.title}</h3>

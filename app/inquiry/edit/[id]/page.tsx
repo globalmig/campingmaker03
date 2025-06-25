@@ -1,8 +1,9 @@
 'use client';
 
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import InquiryForm from "@/components/InquiryForm";
 import { useParams, useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface InquiryForm {
      title: string;
@@ -81,8 +82,8 @@ export default function InquiryEditPage() {
 
   return (
     <article>
-      <img className='mo' src="/images/common_banner_mo.png" alt='배너' />
-      <img className='pc' src="/images/common_banner.png" alt='배너' />
+      <Image className='mo' src="/images/common_banner_mo.png" alt='배너' />
+      <Image className='pc' src="/images/common_banner.png" alt='배너' />
       <div>
         <h3>견적 및 문의</h3>
         <InquiryForm

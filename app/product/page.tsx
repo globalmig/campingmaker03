@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Image from "next/image";
 
 export default function ProductPage() {
     return (
@@ -6,14 +7,14 @@ export default function ProductPage() {
             <div className="product">
 
                 <div>
-                    <img src="/images/product/product_luxury.png" alt="캠핑메이커 패키지 상품 럭셔리" />
-                    <img src="/images/product/product_noble.png" alt="캠핑메이커 패키지 상품 노블" />
-                    <img src="/images/product/product_premium.png" alt="캠핑메이커 패키지 상품 프리미엄" />
-                    <img src="/images/product/product_modern.png" alt="캠핑메이커 패키지 상품 모던" />
-                    <img src="/images/product/product_smart.png" alt="캠핑메이커 패키지 상품 스마트" />
-                    <img src="/images/product/product_nomal.png" alt="캠핑메이커 패키지 상품 노멀" />
-                    <img src="/images/product/product_suv.png" alt="캠핑메이커 패키지 상품 SUV" />
-                    <img src="/images/product/product_truck.png" alt="캠핑메이커 패키지 상품 픽업트럭" />
+                    <Image src="/images/product/product_luxury.png" alt="캠핑메이커 패키지 상품 럭셔리" />
+                    <Image src="/images/product/product_noble.png" alt="캠핑메이커 패키지 상품 노블" />
+                    <Image src="/images/product/product_premium.png" alt="캠핑메이커 패키지 상품 프리미엄" />
+                    <Image src="/images/product/product_modern.png" alt="캠핑메이커 패키지 상품 모던" />
+                    <Image src="/images/product/product_smart.png" alt="캠핑메이커 패키지 상품 스마트" />
+                    <Image src="/images/product/product_nomal.png" alt="캠핑메이커 패키지 상품 노멀" />
+                    <Image src="/images/product/product_suv.png" alt="캠핑메이커 패키지 상품 SUV" />
+                    <Image src="/images/product/product_truck.png" alt="캠핑메이커 패키지 상품 픽업트럭" />
                 </div>
 
                 <div>
@@ -59,49 +60,49 @@ export default function ProductPage() {
                 <div>
                     <div>
                         <h2>오직 캠핑메이커에서만 제작 가능한<br />최고급 캠핑카</h2>
-                        <img src="/images/product/product_1.png" />
+                        <Image src="/images/product/product_1.png" alt=""/>
                     </div>
                     <div>
                         <h2>견고한 가구와 다양한 옵션</h2>
                         <div className="display-flex-flow">
-                            <img src="/images/product/product_option_1.png" />
-                            <img src="/images/product/product_option_2.png" />
-                            <img src="/images/product/product_option_3.png" />
-                            <img src="/images/product/product_option_4.png" />
+                            <Image src="/images/product/product_option_1.png" alt=""/>
+                            <Image src="/images/product/product_option_2.png" alt=""/>
+                            <Image src="/images/product/product_option_3.png" alt=""/>
+                            <Image src="/images/product/product_option_4.png" alt=""/>
                         </div>
                     </div>
                     <div>
                         <h2>어닝 및 루프탑 팝업텐트도 캠핑메이커에서</h2>
-                        <img src="/images/product/product_loof_flex.png" />
+                        <Image src="/images/product/product_loof_flex.png" alt=""/>
                     </div>
                     <div>
                         <h2>위성 안테나, 미러링 동글로 어디서든 TV 시청 가능</h2>
-                        <img src="/images/product/product_tv.png" />
+                        <Image src="/images/product/product_tv.png" alt=""/>
                     </div>
                     <div>
                         <h2>다양한 목재를 사용한 실내 인테리어</h2>
                         <div className="display-flex-flow">
-                            <img src="/images/product/product_tree_1.png" />
-                            <img src="/images/product/product_tree_2.png" />
-                            <img src="/images/product/product_tree_3.png" />
-                            <img src="/images/product/product_tree_4.png" />
+                            <Image src="/images/product/product_tree_1.png" alt=""/>
+                            <Image src="/images/product/product_tree_2.png" alt=""/>
+                            <Image src="/images/product/product_tree_3.png" alt=""/>
+                            <Image src="/images/product/product_tree_4.png" alt=""/>
                         </div>
                     </div>
                     <div>
                         <h2>부족함 없는 넓은 수납공간</h2>
                         <div className="display-flex-flow">
-                            <img src="/images/product/product_box_1.png" />
-                            <img src="/images/product/product_box_2.png" />
-                            <img src="/images/product/product_box_3.png" />
-                            <img src="/images/product/product_box_4.png" />
+                            <Image src="/images/product/product_box_1.png" alt=""/>
+                            <Image src="/images/product/product_box_2.png" alt=""/>
+                            <Image src="/images/product/product_box_3.png" alt=""/>
+                            <Image src="/images/product/product_box_4.png" alt=""/>
                         </div>
                     </div>
                     <div>
                         <h2>고객의 안전을 최우선 하는<br />
                             전기 시설 배치와 전선 마감</h2>
                         <div className="display-flex-flow">
-                            <img src="/images/product/product_electricity_1.png" />
-                            <img src="/images/product/product_electricity_2.png" />
+                            <Image src="/images/product/product_electricity_1.png" alt=""/>
+                            <Image src="/images/product/product_electricity_2.png" alt=""/>
                         </div>
                     </div>
                     <div className="background-wrapper">
@@ -113,15 +114,15 @@ export default function ProductPage() {
 
                 <div className="display-flex">
                     <section>
-                        <img src="/images/product/product_custom_1.png" />
+                        <Image src="/images/product/product_custom_1.png" alt=""/>
                         <p>확장형 침상</p>
                     </section>
                     <section>
-                        <img src="/images/product/product_custom_2.png" />
+                        <Image src="/images/product/product_custom_2.png" alt=""/>
                         <p>주방시설<br />(본인냉장고 활용)</p>
                     </section>
                     <section>
-                        <img src="/images/product/product_custom_3.png" />
+                        <Image src="/images/product/product_custom_3.png" alt=""/>
                         <p>1열 콘솔 박스</p>
                     </section>
                 </div>
@@ -136,7 +137,7 @@ export default function ProductPage() {
                 <div>
                     <section className="display-flex">
                         <div>
-                            <img src="/images/product/product_car_모하비.png" />
+                            <Image src="/images/product/product_car_모하비.png" alt=""/>
                         </div>
                         <div>
                             <h3>모하비</h3>
@@ -151,7 +152,7 @@ export default function ProductPage() {
                     </section>
                     <section className="display-flex">
                         <div>
-                            <img src="/images/product/product_car_코란토투리스모.png" />
+                            <Image src="/images/product/product_car_코란토투리스모.png" alt=""/>
                         </div>
                         <div>
                             <h3>코란도 투리스모</h3>
@@ -168,7 +169,7 @@ export default function ProductPage() {
                     </section>
                     <section className="display-flex">
                         <div>
-                            <img src="/images/product/product_car_올란도.png" />
+                            <Image src="/images/product/product_car_올란도.png" alt=""/>
                         </div>
                         <div>
                             <h3>올란도</h3>
@@ -186,7 +187,7 @@ export default function ProductPage() {
                     </section>
                     <section className="display-flex">
                         <div>
-                            <img src="/images/product/product_car_코나.png" />
+                            <Image src="/images/product/product_car_코나.png" alt=""/>
                         </div>
                         <div>
                             <h3>코나</h3>
@@ -201,7 +202,7 @@ export default function ProductPage() {
                     </section>
                     <section className="display-flex">
                         <div>
-                            <img src="/images/product/product_car_QM6LPG.png" />
+                            <Image src="/images/product/product_car_QM6LPG.png" alt=""/>
                         </div>
                         <div>
                             <h3>QM6 LPG</h3>
@@ -216,7 +217,7 @@ export default function ProductPage() {
                     </section>
                     <section className="display-flex">
                         <div>
-                            <img src="/images/product/product_car_싼타페.png" />
+                            <Image src="/images/product/product_car_싼타페.png" alt=""/>
                         </div>
                         <div>
                             <h3>싼타페</h3>

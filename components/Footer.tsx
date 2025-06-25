@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,13 +9,13 @@ export default function Footer() {
                 <div className="display-flex-flow">
                     <div>
                         <div>
-                            <img src="/icons/logo.png" alt="로고" />
+                            <Image src="/icons/logo.png" alt="로고" />
                             <div className="display-flex">
                                 <Link href="https://naver.me/GMmr08Lg">
-                                    <img src="/icons/icon_naverblog.png" alt="네이버 블로그 이동" />
+                                    <Image src="/icons/icon_naverblog.png" alt="네이버 블로그 이동" />
                                 </Link>
                                 <Link href="https://www.youtube.com/channel/UC0myVFv2l0TEYfXIkyCdJRg">
-                                    <img src="/icons/icon_youtube.png" alt="유튜브 이동" />
+                                    <Image src="/icons/icon_youtube.png" alt="유튜브 이동" />
                                 </Link>
                             </div>
                         </div>
@@ -57,18 +58,18 @@ export default function Footer() {
                 <div className="icon-menu">
                     <div>
                         <Link href="tel:010-8347-7470" className="display-flex">
-                            <img src="/icons/icon_tel.png" alt="상담전화"/>
+                            <Image src="/icons/icon_tel.png" alt="상담전화"/>
                             <p>010-8347-7470</p>
                         </Link>
                     </div>
                     <div>
                         <Link href="/inquiry/write" className="display-flex">
-                            <img src="/icons/icon_talk.png" alt="문의하기"/>
+                            <Image src="/icons/icon_talk.png" alt="문의하기"/>
                             <p>문의하기</p>
                         </Link>
                     </div>
                     <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
-                        <img src="/icons/icon_top.png" alt="맨 위로" />
+                        <Image src="/icons/icon_top.png" alt="맨 위로" />
                     </div>
                 </div>
             </footer>

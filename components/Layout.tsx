@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import ConditionalButtons from './ConditionalButtons';
+import Image from 'next/image';
 
 type Props = {
     title: string;
@@ -13,8 +14,8 @@ export default function Layout({ title, backgroundText, content, span, children 
 
     return (
         <article>
-            <img className='mo' src="/images/common_banner_mo.png" alt='배너'/>
-            <img className='pc' src="/images/common_banner.png" alt='배너' />
+            <Image className='mo' src="/images/common_banner_mo.png" alt='배너'/>
+            <Image className='pc' src="/images/common_banner.png" alt='배너' />
             <div>
                 <h1>{backgroundText}</h1>
                 <div>
