@@ -3,7 +3,7 @@ import InquiryList from "@/components/InquiryList";
 import Layout from "@/components/Layout";
 import Pagination from "@/components/Pagination";
 import Search from "@/components/Search";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface Inquiry {
   _id: string;
@@ -22,10 +22,12 @@ export default function InquiryPage() {
 
   const dataPerPage = 10;
 
-  const fetchData = async () => {
+const fetchData = useCallback(async () => {
     try {
       const query = searchKeyword
-        ? `/api/lists/search?keyword=${encodeURIComponent(searchKeyword)}&type=${searchType}&page=${startPage}&limit=${dataPerPage}`
+        ? `/api/lists/search?keyword=${encodeURIComponent(
+            searchKeyword
+          )}&type=${searchType}&page=${startPage}&limit=${dataPerPage}`
         : `/api/pages?page=${startPage}&limit=${dataPerPage}`;
 
       const res = await fetch(query);
@@ -33,7 +35,7 @@ export default function InquiryPage() {
 
       if (res.ok) {
         setData(json.data);
-        setDataCount(json.totalCount || json.data.length);
+        setDataCount(json.totalCount ?? json.data.length);
       } else {
         setData([]);
         setDataCount(0);
@@ -43,15 +45,14 @@ export default function InquiryPage() {
       setData([]);
       setDataCount(0);
     }
-  };
+  }, [searchKeyword, searchType, startPage, dataPerPage]);
 
   useEffect(() => {
     fetchData();
-  }, [startPage]);
+  }, [fetchData]);
 
   const onSearch = () => {
-    setStartPage(1); // 검색 시 첫 페이지로 리셋
-    fetchData();
+    setStartPage(1);
   };
 
   return (

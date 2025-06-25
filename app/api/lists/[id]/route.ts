@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import Inquiry from '@/models/Inquiry';
 
@@ -15,12 +15,12 @@ export interface Inquiry {
 }
 
 // detail read
-export async function GET(request: Request, { params }: Params) {
+export async function GET(request: NextRequest, { params }: Params) {
   try {
     await connectDB();
 
     const inquiry = await Inquiry.findById(params.id).lean() as
-      | (Inquiry & { _id: any; createdAt: Date; updatedAt: Date })
+      | (Inquiry & { _id: string; createdAt: Date; updatedAt: Date })
       | null;
 
     if (!inquiry) {
@@ -42,7 +42,7 @@ export async function GET(request: Request, { params }: Params) {
 }
 
 // update
-export async function PUT(request: Request, { params }: Params) {
+export async function PUT(request: NextRequest, { params }: Params) {
   try {
     await connectDB();
 
@@ -71,7 +71,7 @@ export async function PUT(request: Request, { params }: Params) {
 }
 
 // delete
-export async function DELETE(request: Request, { params }: Params) {
+export async function DELETE(request: NextRequest, { params }: Params) {
   try {
     await connectDB();
 

@@ -108,7 +108,7 @@ const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
     }
   };
 
-  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseLeave = () => {
     document.querySelectorAll(".index-img-wrap ul li").forEach((el) =>
       el.classList.remove("wid45", "wid44", "wid55", "wid56")
     );

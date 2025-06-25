@@ -60,6 +60,7 @@ export default function InquiryAskPage() {
       router.push('/inquiry');
     } else {
       const err = await res.json();
+      console.log(err)
       alert("게시글 등록에 실패했습니다. 다시 시도해주세요.");
     }
 

@@ -14,17 +14,17 @@ interface MongooseGlobalCache {
 
 // NodeJS 글로벌 객체 확장
 declare global {
-  // eslint-disable-next-line no-var
   var mongoose: MongooseGlobalCache | undefined;
 }
 
 // 전역 캐시 사용
-let cached: MongooseGlobalCache;
+//let cached: MongooseGlobalCache;
+const cached: MongooseGlobalCache = global.mongoose!;
 
 if (!global.mongoose) {
   global.mongoose = { conn: null, promise: null };
 }
-cached = global.mongoose;
+//cached = global.mongoose;
 
 async function connectDB(): Promise<Mongoose> {
   if (cached.conn) {

@@ -108,7 +108,7 @@ export default function DirectionsPage() {
                     </div>
                     <div>
                         <div className="display-flex direction-icon">
-                            <img src="icons/icon_profile.png" alt="사업자번호 아이콘" />
+                            <Image src="icons/icon_profile.png" alt="사업자번호 아이콘" />
                             <p>사업자번호</p>
                         </div>
                         <div className="display-flex">

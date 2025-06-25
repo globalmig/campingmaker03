@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import connectDB from "@/lib/mongodb";
 import Inquiry from "@/models/Inquiry";
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   await connectDB();
 
   const { searchParams } = new URL(request.url);
