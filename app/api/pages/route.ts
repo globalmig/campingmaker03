@@ -9,6 +9,8 @@ export async function GET(request: NextRequest) {
   const page = parseInt(searchParams.get("page") || "1");
   const limit = parseInt(searchParams.get("limit") || "10");
 
+  console.log("page:", page, "limit:", limit);
+
   const totalCount = await Inquiry.countDocuments();
   console.log("totalCount:", totalCount);
 
