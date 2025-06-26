@@ -10,7 +10,6 @@ interface Inquiry {
   title: string;
   name: string;
   createdAt: string;
-  isSecret: boolean;
 }
 
 export default function InquiryPage() {
