@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import "./style.css";
 import "./mainVisual.css";
-import "./main_visual.js";
+
 import MainVisual from "@/components/Mainvisual";
 import Image from "next/image";
 
@@ -26,6 +26,10 @@ export default function Home() {
 
     // resize 이벤트 리스너 등록
     window.addEventListener("resize", setHeights);
+
+    import("./main_visual.js").then(() => {
+      console.log("main_visual.js loaded (client only)");
+    });
 
     return () => {
       // 클린업
@@ -109,19 +113,11 @@ export default function Home() {
   };
 
   const handleMouseLeave = () => {
-    document.querySelectorAll(".index-img-wrap ul li").forEach((el) =>
-      el.classList.remove("wid45", "wid44", "wid55", "wid56")
-    );
-    document
-      .querySelectorAll(".index-img-wrap ul li .i-c-25half")
-      .forEach((el) => el.classList.remove("hei55", "hei45"));
+    document.querySelectorAll(".index-img-wrap ul li").forEach((el) => el.classList.remove("wid45", "wid44", "wid55", "wid56"));
+    document.querySelectorAll(".index-img-wrap ul li .i-c-25half").forEach((el) => el.classList.remove("hei55", "hei45"));
 
-    document.querySelectorAll(".i-c-half").forEach((el) =>
-      el.classList.remove("wid45", "wid55")
-    );
-    document
-      .querySelectorAll(".i-c-half li")
-      .forEach((el) => el.classList.remove("hei55", "hei45"));
+    document.querySelectorAll(".i-c-half").forEach((el) => el.classList.remove("wid45", "wid55"));
+    document.querySelectorAll(".i-c-half li").forEach((el) => el.classList.remove("hei55", "hei45"));
   };
 
   return (
@@ -158,16 +154,14 @@ export default function Home() {
                 <ul>
                   <li className="i-c-50 i-half2 li2-1">
                     <div className="i-c-25half">
-                      <div className="a-block" onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}>
+                      <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <h3 className="i-c-tit">부족함이 없는 수납공간</h3>
                         <div className="i-c-bg-1-2 i-c-bg"></div>
                       </div>
                     </div>
 
                     <div className="i-c-25half">
-                      <div className="a-block" onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}>
+                      <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <h3 className="i-c-tit">루프탑 텐트</h3>
                         <div className="i-c-bg-1-3 i-c-bg"></div>
                       </div>
@@ -175,8 +169,7 @@ export default function Home() {
                   </li>
 
                   <li className="i-c-50 i-half2 li2-2">
-                    <div className="a-block" onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}>
+                    <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                       <h3 className="i-c-tit">위성 안테나와 미러링 동글로 TV시청</h3>
                       <div className="i-c-bg-1-4 i-c-bg"></div>
                     </div>
@@ -207,16 +200,14 @@ export default function Home() {
                 <ul>
                   <li className="i-c-50 i-half2 li2-1">
                     <div className="i-c-25half">
-                      <div className="a-block" onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}>
+                      <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <h3 className="i-c-tit">전기시설</h3>
                         <div className="i-c-bg-2-1 i-c-bg"></div>
                       </div>
                     </div>
 
                     <div className="i-c-25half">
-                      <div className="a-block" onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}>
+                      <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <h3 className="i-c-tit">냉방시설</h3>
                         <div className="i-c-bg-2-2 i-c-bg"></div>
                       </div>
@@ -224,8 +215,7 @@ export default function Home() {
                   </li>
 
                   <li className="i-c-50 i-half2 li2-2">
-                    <div className="a-block" onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}>
+                    <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                       <h3 className="i-c-tit">주방시설</h3>
                       <div className="i-c-bg-2-3 i-c-bg"></div>
                     </div>
@@ -234,8 +224,7 @@ export default function Home() {
               </li>
 
               <li className="i-c-50 i-half1 li1">
-                <div className="a-block" onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
+                <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                   <h3 className="i-c-tit">원목가구</h3>
                   <div className="i-c-bg-2-4 i-c-bg"></div>
                 </div>
@@ -261,16 +250,14 @@ export default function Home() {
           <div className="index-img-wrap cf">
             <ul className="i-c-half">
               <li className="i-c-4-1 i-c-block">
-                <div className="a-block" onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
+                <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                   <h3 className="i-c-tit">확장형 침상</h3>
                   <div className="i-c-bg i-c-bg"></div>
                 </div>
               </li>
 
               <li className="i-c-4-2 i-c-block">
-                <div className="a-block" onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
+                <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                   <h3 className="i-c-tit">테이블</h3>
                   <div className="i-c-bg i-c-bg"></div>
                 </div>
@@ -278,16 +265,14 @@ export default function Home() {
             </ul>
             <ul className="i-c-half">
               <li className="i-c-4-3 i-c-block">
-                <div className="a-block" onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
+                <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                   <h3 className="i-c-tit">TV</h3>
                   <div className="i-c-bg i-c-bg"></div>
                 </div>
               </li>
 
               <li className="i-c-4-4 i-c-block">
-                <div className="a-block" onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
+                <div className="a-block" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                   <h3 className="i-c-tit">수납장</h3>
                   <div className="i-c-bg i-c-bg"></div>
                 </div>
@@ -304,14 +289,11 @@ export default function Home() {
           <div className="display-flex-flow">
             <section className="social-media-up">
               <div className="media-image">
-                <div style={{ width: '30px', maxWidth: '40px' }}>
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                <div style={{ width: "30px", maxWidth: "40px" }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: "100%", height: "auto" }} />
                 </div>
-                <div style={{ width: '100%%', maxWidth: '240px' }}>
-                  <Image
-                    src="/images/social_media_1.png"
-                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
-                  />
+                <div style={{ width: "100%%", maxWidth: "240px" }}>
+                  <Image src="/images/social_media_1.png" alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: "100%", height: "auto" }} />
                 </div>
               </div>
               <div className="media-con">
@@ -327,27 +309,21 @@ export default function Home() {
                 <p>새로운 방식의 가죽형 캠핑카가 어떻게 진행될까요?</p>
               </div>
               <div className="media-image">
-                <div style={{ width: '30px', maxWidth: '40px' }}>
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                <div style={{ width: "30px", maxWidth: "40px" }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: "100%", height: "auto" }} />
                 </div>
-                <div style={{ width: '100%%', maxWidth: '240px' }}>
-                  <Image
-                    src="/images/social_media_2.png"
-                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
-                  />
+                <div style={{ width: "100%%", maxWidth: "240px" }}>
+                  <Image src="/images/social_media_2.png" alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: "100%", height: "auto" }} />
                 </div>
               </div>
             </section>
             <section className="social-media-up">
               <div className="media-image">
-                <div style={{ width: '30px', maxWidth: '40px' }}>
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                <div style={{ width: "30px", maxWidth: "40px" }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: "100%", height: "auto" }} />
                 </div>
-                <div style={{ width: '100%%', maxWidth: '240px' }}>
-                  <Image
-                    src="/images/social_media_3.png"
-                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
-                  />
+                <div style={{ width: "100%%", maxWidth: "240px" }}>
+                  <Image src="/images/social_media_3.png" alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: "100%", height: "auto" }} />
                 </div>
               </div>
               <div className="media-con">
@@ -366,27 +342,21 @@ export default function Home() {
                 <p>넓고 높은 다마스 캠핑카</p>
               </div>
               <div className="media-image">
-                <div style={{ width: '30px', maxWidth: '40px' }}>
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                <div style={{ width: "30px", maxWidth: "40px" }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: "100%", height: "auto" }} />
                 </div>
-                <div style={{ width: '100%%', maxWidth: '240px' }}>
-                  <Image
-                    src="/images/social_media_4.png"
-                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
-                  />
+                <div style={{ width: "100%%", maxWidth: "240px" }}>
+                  <Image src="/images/social_media_4.png" alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: "100%", height: "auto" }} />
                 </div>
               </div>
             </section>
             <section className="social-media-up">
               <div className="media-image">
-                <div style={{ width: '30px', maxWidth: '40px' }}>
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                <div style={{ width: "30px", maxWidth: "40px" }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: "100%", height: "auto" }} />
                 </div>
-                <div style={{ width: '100%%', maxWidth: '240px' }}>
-                  <Image
-                    src="/images/social_media_5.png"
-                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
-                  />
+                <div style={{ width: "100%%", maxWidth: "240px" }}>
+                  <Image src="/images/social_media_5.png" alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: "100%", height: "auto" }} />
                 </div>
               </div>
               <div className="media-con">
@@ -402,14 +372,11 @@ export default function Home() {
                 <p>패브릭 감성을 더한 스타리아 캠핑카</p>
               </div>
               <div className="media-image">
-                <div style={{ width: '30px', maxWidth: '40px' }}>
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                <div style={{ width: "30px", maxWidth: "40px" }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: "100%", height: "auto" }} />
                 </div>
-                <div style={{ width: '100%%', maxWidth: '240px' }}>
-                  <Image
-                    src="/images/social_media_6.png"
-                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
-                  />
+                <div style={{ width: "100%%", maxWidth: "240px" }}>
+                  <Image src="/images/social_media_6.png" alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: "100%", height: "auto" }} />
                 </div>
               </div>
             </section>
