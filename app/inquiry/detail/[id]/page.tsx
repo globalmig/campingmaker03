@@ -17,7 +17,7 @@ interface InquiryDetail {
 
 interface IComment {
   _id: string;
-   writer: string;
+  writer: string;
   content: string;
   createdAt: string;
 }
@@ -68,25 +68,27 @@ export default function InquiryDetailPage() {
     if (!params.id) return;
 
     const fetchComments = async () => {
-  try {
-    const res = await fetch(`/api/comment/${params.id}`);
-    const json = await res.json();
-    setComments(json.comments);
-  } catch (err) {
-    console.error("댓글 가져오기 에러:", err);
-  }
-};
+      try {
+        const res = await fetch(`/api/comment/${params.id}`);
+        const json = await res.json();
+        setComments(json.comments);
+      } catch (err) {
+        console.error("댓글 가져오기 에러:", err);
+      }
+    };
 
     fetchComments();
   }, [params.id]);
 
   return (
     <article className="inquiry-detail">
-      <Image className="mo" src="/images/common_banner_mo.png" alt="배너" />
-      <Image className="pc" src="/images/common_banner.png" alt="배너" />
+      <section style={{ width: '100%', maxWidth: "2000" }}>
+        <Image className='mo' src="/images/common_banner_mo.png" alt='배너' width={390} height={153} style={{ width: '100%', height: 'auto' }} />
+        <Image className='pc' src="/images/common_banner.png" alt='배너' width={1920} height={400} style={{ width: '100%', height: 'auto' }} />
+      </section>
       <div>
         {data ? <>
-        <h3>{data.title}</h3>
+          <h3>{data.title}</h3>
           <div className="display-flex">
             <p>{data.name}</p>
             <p>{new Date(data.createdAt).toLocaleDateString('ko-KR', {

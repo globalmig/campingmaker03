@@ -3,17 +3,19 @@ import connectDB from '@/lib/mongodb';
 import Comment from '@/models/Comment';
 
 export async function GET(
-  request: NextRequest,
+  req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
+    const id = params.id;
+
     await connectDB();
 
-    const comments = await Comment.find({ inquiryId: params.id })
+    const comments = await Comment.find({ inquiryId: id })
       .sort({ createdAt: 1 })
       .lean();
 
-    return NextResponse.json({ comments: comments || [] });
+    return NextResponse.json({ comments });
   } catch (error) {
     console.error('댓글 목록 가져오기 실패:', error);
     return NextResponse.json({ error: '서버 오류' }, { status: 500 });

@@ -135,12 +135,11 @@ header>div {
     padding: 20px 5%;
 }
 
-header>div>a {
+header>div>:first-child a{
     z-index: 100;
-
 }
 
-header>div>a img{
+header>div>:first-child img{
     width: 70px;
 }
 
@@ -271,29 +270,29 @@ footer>:first-child>:first-child {
     background-color: #444F69;
 }
 
-footer>:first-child>:first-child>div>img {
+footer>:first-child>:first-child>div>:first-child img {
     margin: 0 auto 30px;
     width: 100px;
 }
 
-footer>:first-child>:first-child>div>div {
+footer>:first-child>:first-child>div>:last-child{
     justify-content: center;
     gap: 30px
 }
 
-footer>:first-child>:first-child>div>div a {
+footer>:first-child>:first-child>div>:last-child a {
     opacity: 0.5;
 }
 
-footer>:first-child>:first-child>div>div a:hover {
+footer>:first-child>:first-child>div>:last-child a:hover {
     opacity: 1;
 }
 
-footer>:first-child>:first-child>div>div a img{
+footer>:first-child>:first-child>div>:last-child a img{
     width: 40px;
 }
 
-footer>:first-child>:first-child>div>div a:last-of-type img{
+footer>:first-child>:first-child>div>:last-child a:last-of-type img{
     padding-top: 5px;
     width: 35px;
 }

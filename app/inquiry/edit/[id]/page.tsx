@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 
 interface InquiryForm {
-     title: string;
+  title: string;
   name: string;
   content: string;
   password: string;
@@ -82,8 +82,10 @@ export default function InquiryEditPage() {
 
   return (
     <article>
-      <Image className='mo' src="/images/common_banner_mo.png" alt='배너' />
-      <Image className='pc' src="/images/common_banner.png" alt='배너' />
+      <section style={{ width: '100%', maxWidth: "2000" }}>
+        <Image className='mo' src="/images/common_banner_mo.png" alt='배너' width={390} height={153} style={{ width: '100%', height: 'auto' }} />
+        <Image className='pc' src="/images/common_banner.png" alt='배너' width={1920} height={400} style={{ width: '100%', height: 'auto' }} />
+      </section>
       <div>
         <h3>견적 및 문의</h3>
         <InquiryForm

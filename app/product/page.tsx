@@ -6,15 +6,15 @@ export default function ProductPage() {
         <Layout title="PRODUCT" backgroundText="PRODUCT" span="캠핑메이커 패키지 상품" content="을 소개합니다.">
             <div className="product">
 
-                <div>
-                    <Image src="/images/product/product_luxury.png" alt="캠핑메이커 패키지 상품 럭셔리" />
-                    <Image src="/images/product/product_noble.png" alt="캠핑메이커 패키지 상품 노블" />
-                    <Image src="/images/product/product_premium.png" alt="캠핑메이커 패키지 상품 프리미엄" />
-                    <Image src="/images/product/product_modern.png" alt="캠핑메이커 패키지 상품 모던" />
-                    <Image src="/images/product/product_smart.png" alt="캠핑메이커 패키지 상품 스마트" />
-                    <Image src="/images/product/product_nomal.png" alt="캠핑메이커 패키지 상품 노멀" />
-                    <Image src="/images/product/product_suv.png" alt="캠핑메이커 패키지 상품 SUV" />
-                    <Image src="/images/product/product_truck.png" alt="캠핑메이커 패키지 상품 픽업트럭" />
+                <div style={{ width: '100%', maxWidth: '1500px' }}>
+                    <Image src="/images/product/product_luxury.png" alt="캠핑메이커 패키지 상품 럭셔리" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/images/product/product_noble.png" alt="캠핑메이커 패키지 상품 노블" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/images/product/product_premium.png" alt="캠핑메이커 패키지 상품 프리미엄" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/images/product/product_modern.png" alt="캠핑메이커 패키지 상품 모던" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/images/product/product_smart.png" alt="캠핑메이커 패키지 상품 스마트" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/images/product/product_nomal.png" alt="캠핑메이커 패키지 상품 노멀" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/images/product/product_suv.png" alt="캠핑메이커 패키지 상품 SUV" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
+                    <Image src="/images/product/product_truck.png" alt="캠핑메이커 패키지 상품 픽업트럭" width={1500} height={1122} style={{ width: '100%', height: 'auto' }} />
                 </div>
 
                 <div>
@@ -60,49 +60,58 @@ export default function ProductPage() {
                 <div>
                     <div>
                         <h2>오직 캠핑메이커에서만 제작 가능한<br />최고급 캠핑카</h2>
-                        <Image src="/images/product/product_1.png" alt=""/>
+                        <div style={{ width: '100%', maxWidth: '1500px' }}>
+                            <Image src="/images/product/product_1.png" alt="" width={1500} height={20} style={{ width: '100%', height: 'auto' }}
+                            />
+                        </div>
                     </div>
                     <div>
                         <h2>견고한 가구와 다양한 옵션</h2>
-                        <div className="display-flex-flow">
-                            <Image src="/images/product/product_option_1.png" alt=""/>
-                            <Image src="/images/product/product_option_2.png" alt=""/>
-                            <Image src="/images/product/product_option_3.png" alt=""/>
-                            <Image src="/images/product/product_option_4.png" alt=""/>
+                        <div className="display-flex-flow" style={{ width: '100%', maxWidth: '1500px' }}>
+                            <Image src="/images/product/product_option_1.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }}
+                            />
+                            <Image src="/images/product/product_option_2.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }}
+                            />
+                            <Image src="/images/product/product_option_3.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }}
+                            />
+                            <Image src="/images/product/product_option_4.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }}
+                            />
                         </div>
                     </div>
                     <div>
                         <h2>어닝 및 루프탑 팝업텐트도 캠핑메이커에서</h2>
-                        <Image src="/images/product/product_loof_flex.png" alt=""/>
+                        <div style={{ width: '100%', maxWidth: '1500px' }}>
+                            <Image src="/images/product/product_loof_flex.png" alt="" width={1500} height={20} style={{ width: '100%', height: 'auto' }} />
+                        </div>
                     </div>
                     <div>
                         <h2>위성 안테나, 미러링 동글로 어디서든 TV 시청 가능</h2>
-                        <Image src="/images/product/product_tv.png" alt=""/>
+                        <Image src="/images/product/product_tv.png" alt="" width={1500} height={20} style={{ width: '100%', height: 'auto' }} />
                     </div>
                     <div>
                         <h2>다양한 목재를 사용한 실내 인테리어</h2>
-                        <div className="display-flex-flow">
-                            <Image src="/images/product/product_tree_1.png" alt=""/>
-                            <Image src="/images/product/product_tree_2.png" alt=""/>
-                            <Image src="/images/product/product_tree_3.png" alt=""/>
-                            <Image src="/images/product/product_tree_4.png" alt=""/>
+                        <div className="display-flex-flow" style={{ width: '100%', maxWidth: '1500px' }}>
+                                <Image src="/images/product/product_tree_1.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }} />
+                                <Image src="/images/product/product_tree_2.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }} />
+                                <Image src="/images/product/product_tree_3.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }} />
+                                <Image src="/images/product/product_tree_4.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }} />
                         </div>
                     </div>
                     <div>
                         <h2>부족함 없는 넓은 수납공간</h2>
-                        <div className="display-flex-flow">
-                            <Image src="/images/product/product_box_1.png" alt=""/>
-                            <Image src="/images/product/product_box_2.png" alt=""/>
-                            <Image src="/images/product/product_box_3.png" alt=""/>
-                            <Image src="/images/product/product_box_4.png" alt=""/>
+                        <div className="display-flex-flow" style={{ width: '100%', maxWidth: '1500px' }}>
+                                <Image src="/images/product/product_box_1.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }} />
+                                <Image src="/images/product/product_box_2.png" alt="" width={720} height={20} style={{ width:'48%', height: 'auto' }} />
+                                <Image src="/images/product/product_box_3.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }} />
+                                <Image src="/images/product/product_box_4.png" alt="" width={720} height={20} style={{ width: '48%', height: 'auto' }} />
                         </div>
                     </div>
                     <div>
                         <h2>고객의 안전을 최우선 하는<br />
                             전기 시설 배치와 전선 마감</h2>
-                        <div className="display-flex-flow">
-                            <Image src="/images/product/product_electricity_1.png" alt=""/>
-                            <Image src="/images/product/product_electricity_2.png" alt=""/>
+                        <div className="display-flex-flow" style={{ width: '100%', maxWidth: '1500px' }}>
+                                <Image src="/images/product/product_electricity_1.png" alt="" width={1500} height={20} style={{ width: '48%', height: 'auto' }} />
+                                <Image src="/images/product/product_electricity_2.png" alt="" width={1500} height={20} style={{ width: '48%', height: 'auto' }} />
                         </div>
                     </div>
                     <div className="background-wrapper">
@@ -113,16 +122,16 @@ export default function ProductPage() {
                 </div>
 
                 <div className="display-flex">
-                    <section>
-                        <Image src="/images/product/product_custom_1.png" alt=""/>
+                    <section style={{ width: '30%', maxWidth: '460px' }}>
+                        <Image src="/images/product/product_custom_1.png" alt="" width={460} height={20} style={{ width: '100%', height: 'auto' }} />
                         <p>확장형 침상</p>
                     </section>
-                    <section>
-                        <Image src="/images/product/product_custom_2.png" alt=""/>
+                    <section style={{ width: '30%', maxWidth: '460px' }}>
+                        <Image src="/images/product/product_custom_2.png" alt="" width={460} height={20} style={{ width: '100%', height: 'auto' }} />
                         <p>주방시설<br />(본인냉장고 활용)</p>
                     </section>
-                    <section>
-                        <Image src="/images/product/product_custom_3.png" alt=""/>
+                    <section style={{ width: '30%', maxWidth: '460px' }}>
+                        <Image src="/images/product/product_custom_3.png" alt="" width={460} height={20} style={{ width: '100%', height: 'auto' }} />
                         <p>1열 콘솔 박스</p>
                     </section>
                 </div>
@@ -136,8 +145,8 @@ export default function ProductPage() {
 
                 <div>
                     <section className="display-flex">
-                        <div>
-                            <Image src="/images/product/product_car_모하비.png" alt=""/>
+                        <div style={{ width: '60%', maxWidth: '1000px' }}>
+                            <Image src="/images/product/product_car_모하비.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
                             <h3>모하비</h3>
@@ -151,8 +160,8 @@ export default function ProductPage() {
                         </div>
                     </section>
                     <section className="display-flex">
-                        <div>
-                            <Image src="/images/product/product_car_코란토투리스모.png" alt=""/>
+                        <div style={{width: '60%', maxWidth: '1000px' }}>
+                            <Image src="/images/product/product_car_코란토투리스모.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
                             <h3>코란도 투리스모</h3>
@@ -168,8 +177,8 @@ export default function ProductPage() {
                         </div>
                     </section>
                     <section className="display-flex">
-                        <div>
-                            <Image src="/images/product/product_car_올란도.png" alt=""/>
+                        <div style={{width: '60%', maxWidth: '1000px'}}>
+                            <Image src="/images/product/product_car_올란도.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
                             <h3>올란도</h3>
@@ -186,8 +195,8 @@ export default function ProductPage() {
                         </div>
                     </section>
                     <section className="display-flex">
-                        <div>
-                            <Image src="/images/product/product_car_코나.png" alt=""/>
+                        <div style={{ width: '60%', maxWidth: '1000px'}}>
+                            <Image src="/images/product/product_car_코나.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
                             <h3>코나</h3>
@@ -201,8 +210,8 @@ export default function ProductPage() {
                         </div>
                     </section>
                     <section className="display-flex">
-                        <div>
-                            <Image src="/images/product/product_car_QM6LPG.png" alt=""/>
+                        <div style={{ width: '60%', maxWidth: '1000px'}}>
+                            <Image src="/images/product/product_car_QM6LPG.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
                             <h3>QM6 LPG</h3>
@@ -216,8 +225,8 @@ export default function ProductPage() {
                         </div>
                     </section>
                     <section className="display-flex">
-                        <div>
-                            <Image src="/images/product/product_car_싼타페.png" alt=""/>
+                        <div style={{ width: '60%', maxWidth: '1000px'}}>
+                            <Image src="/images/product/product_car_싼타페.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
                             <h3>싼타페</h3>

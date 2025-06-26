@@ -1,5 +1,5 @@
 // models/Inquiry.ts
-import mongoose, { Schema, Document, model, models } from 'mongoose';
+import { Schema, Document, model, models } from 'mongoose';
 
 export interface IInquiry extends Document {
   title: string;

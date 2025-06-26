@@ -5,7 +5,9 @@ import Inquiry from '@/models/Inquiry';
 export async function GET() {
   try {
     await connectDB();
+    console.log("MongoDB connected successfully");
     const inquiries = await Inquiry.find().sort({ createdAt: -1 });
+      console.log("Inquiries fetched:", inquiries.length);
     return NextResponse.json({ data: inquiries });
   } catch (error) {
     console.error('GET /api/lists error:', error);

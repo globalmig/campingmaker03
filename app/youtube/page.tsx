@@ -7,10 +7,10 @@ import { useState } from "react";
 
 export default function YoutubePage() {
     const [youtubeCount, setYoutubeCount] = useState(10);
-    
-        const youtubeMoreClick = () => {
-            setYoutubeCount(youtubeList.length); 
-        };
+
+    const youtubeMoreClick = () => {
+        setYoutubeCount(youtubeList.length);
+    };
     return (
         <Layout title="YOUTUBE" backgroundText="YOUTUBE" span="캠핑메이커의 소식" content="을 유튜브에서 확인해보세요.">
             <div className="youtube">
@@ -23,8 +23,8 @@ export default function YoutubePage() {
                 </div>
                 {youtubeCount < youtubeList.length && (
                     <div className="button-wrapper">
-                        <button className="contents-more" onClick={youtubeMoreClick}>
-                            <Image src="/icons/more_button.png" alt="더보기" />
+                        <button className="contents-more" onClick={youtubeMoreClick} style={{ width: '56px', maxWidth: '100px' }}>
+                            <Image src="/icons/more_button.png" alt="더보기" width={56} height={56} style={{ width: '100%', height: 'auto' }} />
                         </button>
                     </div>
                 )}

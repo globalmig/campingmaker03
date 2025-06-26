@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Model } from 'mongoose';
 
 export interface IComment extends Document {
   inquiryId: mongoose.Types.ObjectId;
@@ -8,14 +8,17 @@ export interface IComment extends Document {
 }
 
 const CommentSchema = new mongoose.Schema({
-  inquiryId: { type: mongoose.Schema.Types.ObjectId,
+  inquiryId: {
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: 'Inquiry', },
+    ref: 'Inquiry',
+  },
   writer: { type: String, required: true },
   content: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
 
-const Comment = mongoose.models.Comment || mongoose.model('Comment', CommentSchema);
+const Comment: Model<IComment> = mongoose.models.Comment || mongoose.model<IComment>('Comment', CommentSchema);
+
 
 export default Comment;

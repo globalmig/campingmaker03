@@ -23,36 +23,38 @@ export default function InquiryPage() {
   const dataPerPage = 10;
 
 const fetchData = useCallback(async () => {
-    try {
-      const query = searchKeyword
-        ? `/api/lists/search?keyword=${encodeURIComponent(
-            searchKeyword
-          )}&type=${searchType}&page=${startPage}&limit=${dataPerPage}`
-        : `/api/pages?page=${startPage}&limit=${dataPerPage}`;
+  try {
+    const query = searchKeyword
+      ? `/api/lists/search?keyword=${encodeURIComponent(searchKeyword)}&type=${searchType}&page=${startPage}&limit=${dataPerPage}`
+      : `/api/pages?page=${startPage}&limit=${dataPerPage}`;
 
-      const res = await fetch(query);
-      const json = await res.json();
+    const res = await fetch(query);
 
-      if (res.ok) {
-        setData(json.data);
-        setDataCount(json.totalCount ?? json.data.length);
-      } else {
-        setData([]);
-        setDataCount(0);
-      }
-    } catch (err) {
-      console.error("검색 또는 페이지 데이터 로딩 오류:", err);
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error('API 응답 실패:', res.status, errText);
       setData([]);
       setDataCount(0);
+      return;
     }
-  }, [searchKeyword, searchType, startPage, dataPerPage]);
+
+    const json = await res.json();
+    setData(json.data);
+    setDataCount(json.totalCount ?? json.data.length);
+  } catch (err) {
+    console.error("검색 또는 페이지 데이터 로딩 오류:", err);
+    setData([]);
+    setDataCount(0);
+  }
+}, [searchKeyword, searchType, startPage, dataPerPage]);
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, [startPage]);
 
   const onSearch = () => {
     setStartPage(1);
+    fetchData();
   };
 
   return (

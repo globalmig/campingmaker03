@@ -13,9 +13,11 @@ export default function Header() {
     return (
         <header>
             <div className="display-flex">
-                <Link href="/">
-                    <Image src="/icons/logo.png" alt="홈" />
-                </Link>
+                <div style={{ width: '100%', maxWidth: '100px' }}>
+                    <Link href="/">
+                        <Image src="/icons/logo.png" alt="홈" width={70} height={20} style={{ width: '100%', height: 'auto' }}/>
+                    </Link>
+                </div>
                 <div className="display-flex">
                     <ul className="pc display-flex">
                         <li><Link href="/product" onClick={() => setNavOpen(false)}>제품</Link></li>

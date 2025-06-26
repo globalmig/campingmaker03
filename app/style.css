@@ -356,19 +356,20 @@
   transform: rotateX(-35deg);
 }
 
-.social-media> :last-child>section div a {
+.social-media> :last-child>section div>div:first-of-type {
   width: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.social-media> :last-child>section div a:hover {
+.social-media> :last-child>section div >div:first-of-type:hover {
   width: 40px;
 }
 
-.social-media> :last-child>section div img {
+.social-media> :last-child>section div>div:last-of-type img {
   width: 100%;
 }
 
@@ -474,26 +475,25 @@
 
 .youtube section> :first-child {
   position: relative;
-  overflow: hidden;
   width: 100%;
 }
 
-.youtube section> :first-child img:first-of-type {
+.youtube section> :first-child>:first-child img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 20px;
 }
 
-.youtube section> :first-child img:last-of-type {
+.youtube section> :first-child>:last-child img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.youtube section> :first-child img:last-of-type:hover {
-  width: 70px;
+.youtube section> :first-child>:last-child img:hover {
+  width: 70px
 }
 
 .youtube section> :nth-child(2) h3 {
@@ -1117,12 +1117,9 @@ form label {
   margin-bottom: 20px;
 }
 
-.directions .direction-icon img {
-  margin-right: 20px;
-}
-
 .directions>:last-child>div>:first-child p {
   font-size: 1.2rem;
+  margin-left: 15px;
 }
 
 .directions>:last-child>div>:last-child {
@@ -1256,10 +1253,6 @@ form label {
     margin: 15px 0;
   }
 
-  .blog section>div {
-    width: 220px;
-    height: 220px;
-  }
 
   .button-wrapper {
     margin-top: 100px;

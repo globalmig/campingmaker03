@@ -7,7 +7,7 @@ import MainVisual from "@/components/Mainvisual";
 import Image from "next/image";
 
 export default function Home() {
-const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
+  const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
 
   // Resize + height 설정
   const setHeights = () => {
@@ -304,13 +304,15 @@ const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
           <div className="display-flex-flow">
             <section className="social-media-up">
               <div className="media-image">
-                <a href="">
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
-                </a>
-                <Image
-                  src="/images/social_media_1.png"
-                  alt="새로운 느낌의 캠핑카"
-                />
+                <div style={{ width: '30px', maxWidth: '40px' }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <div style={{ width: '100%%', maxWidth: '240px' }}>
+                  <Image
+                    src="/images/social_media_1.png"
+                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
               </div>
               <div className="media-con">
                 <p>Youtube</p>
@@ -325,20 +327,28 @@ const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
                 <p>새로운 방식의 가죽형 캠핑카가 어떻게 진행될까요?</p>
               </div>
               <div className="media-image">
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
-                <Image
-                  src="/images/social_media_2.png"
-                  alt="새로운 느낌의 캠핑카"
-                />
+                <div style={{ width: '30px', maxWidth: '40px' }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <div style={{ width: '100%%', maxWidth: '240px' }}>
+                  <Image
+                    src="/images/social_media_2.png"
+                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
               </div>
             </section>
             <section className="social-media-up">
               <div className="media-image">
-                  <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
-                <Image
-                  src="/images/social_media_3.png"
-                  alt="새로운 느낌의 캠핑카"
-                />
+                <div style={{ width: '30px', maxWidth: '40px' }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <div style={{ width: '100%%', maxWidth: '240px' }}>
+                  <Image
+                    src="/images/social_media_3.png"
+                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
               </div>
               <div className="media-con">
                 <p>Youtube</p>
@@ -356,20 +366,28 @@ const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
                 <p>넓고 높은 다마스 캠핑카</p>
               </div>
               <div className="media-image">
-                <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
-                <Image
-                  src="/images/social_media_4.png"
-                  alt="새로운 느낌의 캠핑카"
-                />
+                <div style={{ width: '30px', maxWidth: '40px' }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <div style={{ width: '100%%', maxWidth: '240px' }}>
+                  <Image
+                    src="/images/social_media_4.png"
+                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
               </div>
             </section>
             <section className="social-media-up">
               <div className="media-image">
-               <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
-                <Image
-                  src="/images/social_media_5.png"
-                  alt="새로운 느낌의 캠핑카"
-                />
+                <div style={{ width: '30px', maxWidth: '40px' }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <div style={{ width: '100%%', maxWidth: '240px' }}>
+                  <Image
+                    src="/images/social_media_5.png"
+                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
               </div>
               <div className="media-con">
                 <p>Youtube</p>
@@ -384,11 +402,15 @@ const wrapRefs = useRef<NodeListOf<HTMLDivElement> | null>(null);
                 <p>패브릭 감성을 더한 스타리아 캠핑카</p>
               </div>
               <div className="media-image">
-                <Image src="/icons/icon_video.png" alt="비디오 아이콘"/>
-                <Image
-                  src="/images/social_media_6.png"
-                  alt="새로운 느낌의 캠핑카"
-                />
+                <div style={{ width: '30px', maxWidth: '40px' }}>
+                  <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <div style={{ width: '100%%', maxWidth: '240px' }}>
+                  <Image
+                    src="/images/social_media_6.png"
+                    alt="새로운 느낌의 캠핑카" width={240} height={240} style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
               </div>
             </section>
           </div>

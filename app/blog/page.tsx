@@ -29,8 +29,8 @@ export default function BlogPage() {
                 </div>
                 {blogCount < blogList.length && (
                     <div className="button-wrapper">
-                        <button className="contents-more" onClick={blogMoreClick}>
-                            <Image src="/icons/more_button.png" alt="더보기"/>
+                        <button className="contents-more" onClick={blogMoreClick} style={{ width: '56px', maxWidth: '100px' }}>
+                            <Image src="/icons/more_button.png" alt="더보기" width={56} height={56} style={{ width: '100%', height: 'auto'}}/>
                         </button>
                     </div>
                 )}

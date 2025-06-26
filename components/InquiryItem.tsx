@@ -33,7 +33,6 @@ export default function InquiryItem({ data, index }: InquiryItemProps) {
     });
 
     if (res.ok) {
-      // 상세 페이지로 이동하면서 password를 쿼리로 전달
       router.push(`/inquiry/detail/${data._id}`);
     } else {
       const err = await res.json();
@@ -46,12 +45,16 @@ export default function InquiryItem({ data, index }: InquiryItemProps) {
     <li className="inquiry-item">
       <div className="display-flex-flow">
         <div className="pc">
-          <p className="item-number">{index }</p>
+          <p className="item-number">{index}</p>
         </div>
-        <div className="display-flex lock-item">
-          <Image src="/icons/icon_lock.png" alt="비밀글" className="mo" />
+        <div className="display-flex lock-item" style={{ alignItems: 'center' }}>
+          <div style={{ width: '20px', marginRight: "10px"}}>
+            <Image src="/icons/icon_lock.png" alt="비밀글" className="mo" width={20} height={20} />
+          </div>
           <a href={`/inquiry/detail/${data._id}`} onClick={onClickTitle}>{data.title}</a>
-          <Image src="/icons/icon_lock.png" alt="비밀글" className="pc" />
+          <div style={{ width: '20px',marginLeft: "10px" }}>
+            <Image src="/icons/icon_lock.png" alt="비밀글" className="pc" width={20} height={20} />
+          </div>
         </div>
         <div className="pc item-name">
           <p>{data.name[0] + '*'.repeat(data.name.length - 1)}</p>
@@ -63,9 +66,16 @@ export default function InquiryItem({ data, index }: InquiryItemProps) {
             month: '2-digit',
             day: '2-digit',
           })}</p>
-          <div className="display-flex mo comment-box">
-            <Image src="/icons/icon_talk_white.png" alt="댓글 아이콘" />
-            <p className="comment-count">댓글수</p>
+          <div className="display-flex mo comment-box" style={{ alignItems: 'center' }}>
+            <div style={{ width: '20px', marginRight: '10px' }}>
+              <Image
+                src="/icons/icon_talk_white.png"
+                alt="댓글 아이콘"
+                width={20}
+                height={18}
+              />
+            </div>
+            <p className="comment-count">0</p>
           </div>
         </div>
       </div>

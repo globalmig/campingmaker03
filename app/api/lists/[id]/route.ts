@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import Inquiry from '@/models/Inquiry';
+import Comment from '@/models/Comment';
 
 interface Params {
   params: { id: string };
@@ -26,12 +27,14 @@ export async function GET(request: NextRequest, { params }: Params) {
     if (!inquiry) {
       return NextResponse.json({ error: 'Inquiry not found' }, { status: 404 });
     }
+    const commentCount = await Comment.countDocuments({ inquiryId: params.id });
 
     const result = {
       ...inquiry,
       _id: inquiry._id.toString(),
       createdAt: inquiry.createdAt.toISOString(),
       updatedAt: inquiry.updatedAt.toISOString(),
+      commentCount,
     };
 
     return NextResponse.json(result);
