@@ -5,10 +5,10 @@ import Comment from "@/models/Comment";
 // ───────────────────────────── GET ─────────────────────────────
 export async function GET(
   req: NextRequest,
-  context: { params: Record<string, string> } // ← 여기!
+  { params }: { params: Promise<{ id: string }> } // ← 이렇게 수정!
 ) {
   try {
-    const id = context.params.id; // ✅ 파라미터 사용
+    const { id } = await params; // ✅ Promise를 await로 해결
 
     await connectDB();
 
@@ -22,24 +22,26 @@ export async function GET(
 }
 
 // ───────────────────────────── POST ────────────────────────────
-export async function POST(request: NextRequest) {
-  await connectDB();
-
-  const { writer, content } = await request.json();
-  const url = new URL(request.url);
-  const id = url.pathname.split("/").pop(); // /comment/{id}/route.ts → id 추출
-
-  if (!id) {
-    return NextResponse.json({ error: "잘못된 요청 경로입니다." }, { status: 400 });
-  }
-  if (!writer?.trim()) {
-    return NextResponse.json({ error: "작성자를 입력해주세요." }, { status: 400 });
-  }
-  if (!content?.trim()) {
-    return NextResponse.json({ error: "내용이 비어있습니다." }, { status: 400 });
-  }
-
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> } // ← 이렇게 수정!
+) {
   try {
+    await connectDB();
+
+    const { writer, content } = await request.json();
+    const { id } = await params; // ✅ Promise를 await로 해결
+
+    if (!id) {
+      return NextResponse.json({ error: "잘못된 요청 경로입니다." }, { status: 400 });
+    }
+    if (!writer?.trim()) {
+      return NextResponse.json({ error: "작성자를 입력해주세요." }, { status: 400 });
+    }
+    if (!content?.trim()) {
+      return NextResponse.json({ error: "내용이 비어있습니다." }, { status: 400 });
+    }
+
     await Comment.create({
       inquiryId: id,
       writer,
