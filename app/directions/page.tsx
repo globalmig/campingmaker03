@@ -30,13 +30,13 @@ export default function DirectionsPage() {
                 <div className="display-flex">
                     <button className="display-flex">
                         <div style={{ width: '15px' }}>
-                            <Image src="/icons/icon_location.png" alt="길찾기" width={100} height={13} style={{ width: '100%', height: 'auto' }} />
+                            <Image src="/icons/icon_location.png" alt="길찾기" width={15} height={15} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <Link href="https://naver.me/GMmr08Lg">길찾기</Link>
                     </button>
                     <button className="display-flex">
                         <div style={{ width: '15px' }}>
-                            <Image src="/icons/icon_map.png" alt="지도에서보기" width={100} height={13} style={{ width: '100%', height: 'auto' }} />
+                            <Image src="/icons/icon_map.png" alt="지도에서보기" width={15} height={15} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <Link href="https://naver.me/GMmr08Lg">지도에서 보기</Link>
                     </button>
@@ -91,38 +91,38 @@ export default function DirectionsPage() {
                     <div>
                         <div className="display-flex direction-icon">
                             <div style={{ width: '15px', maxWidth: '20px' }}>
-                                <Image src="/icons/icon_notice.png" alt="이용안내 아이콘" width={100} height={20} style={{ width: '100%', height: 'auto' }} />
+                                <Image src="/icons/icon_notice.png" alt="이용안내 아이콘" width={20} height={20} style={{ width: '100%', height: 'auto' }} />
                             </div>
                             <p>이용안내</p>
                         </div>
                         <div className="display-flex-flow direction-notice">
                             <section>
-                                <div style={{ width: '45px', height: '50px', maxWidth: '70px', margin:'0 auto' }}>
-                                    <Image src="/icons/icon_directions_1.png" alt="예약" width={40} height={40} style={{ width: '100%', height: 'auto' }} />
+                                <div style={{ width: '30px', height: '40px', maxWidth: '70px', margin:'0 auto' }}>
+                                    <Image src="/icons/icon_directions_1.png" alt="예약" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
                                 </div>
                                 <p>예약</p>
                             </section>
                             <section>
-                                <div style={{ width: '50px',  height: '50px',maxWidth: '70px', margin:'0 auto' }}>
-                                    <Image src="/icons/icon_directions_2.png" alt="주차" width={40} height={40} style={{ width: '100%', height: 'auto' }} />
+                                <div style={{ width: '30px',  height: '40px',maxWidth: '70px', margin:'0 auto' }}>
+                                    <Image src="/icons/icon_directions_2.png" alt="주차" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
                                 </div>
                                 <p>주차</p>
                             </section>
                             <section>
-                                <div style={{ width: '60px',  height: '50px',maxWidth: '70px', margin:'0 auto' }}>
-                                    <Image src="/icons/icon_directions_3.png" alt="발렛파킹" width={40} height={40} style={{ width: '100%', height: 'auto' }} />
+                                <div style={{ width: '30px',  height: '40px',maxWidth: '70px', margin:'0 auto' }}>
+                                    <Image src="/icons/icon_directions_3.png" alt="발렛파킹" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
                                 </div>
                                 <p>발렛파킹</p>
                             </section>
                             <section>
-                                <div style={{ width: '40px',  height: '50px', maxWidth: '70px', margin:'0 auto' }}>
-                                    <Image src="/icons/icon_directions_4.png" alt="무선인터넷" width={50} height={50} style={{ width: '100%', height: 'auto' }} />
+                                <div style={{ width: '30px',  height: '40px', maxWidth: '70px', margin:'0 auto' }}>
+                                    <Image src="/icons/icon_directions_4.png" alt="무선인터넷" width={30} height={30} style={{ width: '100%', height: 'auto' }} />
                                 </div>
                                 <p>무선인터넷</p>
                             </section>
                             <section>
-                                <div style={{ width: '50px',  height: '50px',maxWidth: '70px', margin:'0 auto' }}>
-                                    <Image src="/icons/icon_directions_5.png" alt="애완동물 동반" width={50} height={50} style={{ width: '100%', height: 'auto' }} />
+                                <div style={{ width: '40px',  height: '40px',maxWidth: '70px', margin:'0 auto' }}>
+                                    <Image src="/icons/icon_directions_5.png" alt="애완동물 동반" width={30} height={35} style={{ width: '100%', height: 'auto'}} />
                                 </div>
                                 <p>애완동물 동반</p>
                             </section>

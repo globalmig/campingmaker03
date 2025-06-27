@@ -18,13 +18,12 @@ declare global {
 }
 
 // 전역 캐시 사용
-//let cached: MongooseGlobalCache;
-const cached: MongooseGlobalCache = global.mongoose!;
+let cached: MongooseGlobalCache;
 
 if (!global.mongoose) {
   global.mongoose = { conn: null, promise: null };
 }
-//cached = global.mongoose;
+cached = global.mongoose;
 
 async function connectDB(): Promise<Mongoose> {
   if (cached.conn) {

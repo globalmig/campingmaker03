@@ -80,6 +80,8 @@ export async function DELETE(
     await connectDB();
     const { id } = await params; // ← await로 Promise 해결
 
+     await Comment.deleteMany({ inquiryId: id }); // 해당 게시글의 댓글도 함께 삭제
+
     const deletedInquiry = await Inquiry.findByIdAndDelete(id);
 
     if (!deletedInquiry) {

@@ -406,14 +406,19 @@
 }
 
 .blog section a {
-  width: 70%;
+  width: 50%;
+  font-size: 0.8rem;
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
+.blog section a p span {
+   display: block;
+  }
+
 .blog section a> :first-child {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
@@ -435,27 +440,13 @@
 
 .blog section a> :last-child span {
   font-weight: 300;
-  margin-left: 10px;
   color: #aaa;
 }
 
-.blog section>div {
-  margin: auto 0;
-  position: relative;
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
-}
-
 .blog section>div img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  max-width: 220px;
   object-fit: cover;
-  margin: auto;
   border-radius: 10px;
 }
 
@@ -492,16 +483,21 @@
   transform: translate(-50%, -50%);
 }
 
-.youtube section> :first-child>:last-child img:hover {
-  width: 70px
+.hover-icon:hover {
+  width: 70px;
 }
 
 .youtube section> :nth-child(2) h3 {
+  font-size: 0.9rem;
   margin: 20px 0 10px;
 }
 
+.youtube section> :nth-child(2) p{
+  font-size: 0.8rem;
+}
+
 .youtube section>button {
-  padding: 10px;
+  padding: 8px;
   margin-top: 20px;
   border: 1px solid white;
 }
@@ -536,17 +532,18 @@
 
 .product> :nth-child(2)> :first-child h2 {
   margin: 20px 0 30px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .product> :nth-child(2)>ul {
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 40px 30px;
+  padding: 20px 30px;
   border-radius: 20px;
   margin: 40px 0 30px;
 }
 
 .product> :nth-child(2)>ul li {
+  font-size: 0.8rem;
   list-style-type: circle;
   margin: 8px 0;
 }
@@ -556,30 +553,33 @@
   width: 48%;
   max-width: 730px;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .product> :nth-child(2)> :last-child section:first-of-type {
   background: url("/images/product/product_bg_1.png") no-repeat center;
+  background-size: cover;
 }
 
 .product> :nth-child(2)> :last-child section:last-of-type {
   background: url("/images/product/product_bg_2.png") no-repeat center;
+  background-size: cover;
 }
 
 .product> :nth-child(2)> :last-child section button {
   background-color: #1f2a44;
   color: white;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 8px 15px;
   margin: 0;
 }
 
 .product> :nth-child(2)> :last-child section ul {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .product> :nth-child(2)> :last-child section ul li {
+  font-size: 0.8rem;
   margin: 8px 0;
   color: black;
   font-weight: bold;
@@ -602,6 +602,7 @@
 .product> :nth-child(3)>div h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
 .product> :nth-child(3)>div img {
@@ -628,11 +629,11 @@
 }
 
 .background-wrapper h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .background-wrapper h3 span {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #faa300;
 }
 
@@ -668,6 +669,7 @@
 }
 
 .product> :nth-child(6) section {
+  width: 100%;
   margin: 40px 0;
   padding-bottom: 40px;
   border-bottom: 1px solid #b7c6da;
@@ -677,21 +679,17 @@
   border-bottom: 0;
 }
 
-.product> :nth-child(6) section> :first-child {
-  max-width: 1000px;
-  margin: auto 0;
-  width: 60%;
+.product> :nth-child(6) section >:last-child{
+  margin-top: 30px;
+  flex: 1;
 }
 
 .product> :nth-child(6) section img {
   width: 100%;
 }
 
-.product> :nth-child(6) section> :last-child {
-  width: 30%;
-}
-
 .product> :nth-child(6) section ul {
+  width: 100%;
   margin-top: 10px;
   padding: 12px;
   border-radius: 10px;
@@ -1085,10 +1083,11 @@ form label {
 }
 
 .directions>:nth-child(3) button {
-  padding: 10px 30px;
+  padding: 8px 15px;
   background-color: transparent;
   border: 1px solid white;
   margin-left: 20px;
+  margin-top: 0;
 }
 
 .directions>:nth-child(3) button img {
@@ -1122,14 +1121,14 @@ form label {
   margin-left: 15px;
 }
 
-.directions>:last-child>div>:last-child {
-  margin-top: 10px;
+.directions>:last-child>:first-child>:last-child>:last-child p:first-of-type {
+  color: #ccc;
+  margin-right: 20px;
 }
 
-.directions>:last-child>:first-child>:last-child p:first-of-type {
-  font-weight: bold;
-  color: #ccc;
-  margin-right: 40px;
+.directions>:last-child>:first-child>:last-child>:last-child {
+  justify-content: left;
+  margin-top: 10px;
 }
 
 .directions>:last-child>div>:last-child ul:first-of-type li {
@@ -1155,6 +1154,7 @@ form label {
 }
 
 .directions section p {
+  font-size: 0.8rem;
   margin-top: 10px;
 }
 
@@ -1244,15 +1244,27 @@ form label {
     margin: 15px 0;
   }
 
+  .blog section a p span {
+   display: inline;
+   margin-left: 10px;
+  }
+
   .blog section a {
-    width: 380px;
-  }
+  width: 70%;
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
-  .blog section a> :nth-child(2) {
-    -webkit-line-clamp: 4;
+.blog section a> :first-child {
+  font-size: 1.2rem;
+}
+
+.blog section a> :nth-child(2) {
+  -webkit-line-clamp: 4;
     margin: 15px 0;
-  }
-
+}
 
   .button-wrapper {
     margin-top: 100px;
@@ -1387,8 +1399,12 @@ form label {
     font-size: 1.7rem;
   }
 
+  .product> :nth-child(6) section >:last-child{
+  margin-left: 40px;
+}
+
   .product> :nth-child(6) section ul {
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 20px;
   }
 

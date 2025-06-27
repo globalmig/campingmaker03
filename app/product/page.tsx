@@ -144,8 +144,8 @@ export default function ProductPage() {
                 </div>
 
                 <div>
-                    <section className="display-flex">
-                        <div style={{ width: '60%', maxWidth: '1000px' }}>
+                    <section className="display-flex-flow">
+                        <div style={{ width: '100%', maxWidth: '1000px' }}>
                             <Image src="/images/product/product_car_모하비.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
@@ -159,8 +159,8 @@ export default function ProductPage() {
                             </ul>
                         </div>
                     </section>
-                    <section className="display-flex">
-                        <div style={{width: '60%', maxWidth: '1000px' }}>
+                    <section className="display-flex-flow">
+                        <div style={{width: '100%', maxWidth: '1000px' }}>
                             <Image src="/images/product/product_car_코란토투리스모.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
@@ -176,8 +176,8 @@ export default function ProductPage() {
                             </ul>
                         </div>
                     </section>
-                    <section className="display-flex">
-                        <div style={{width: '60%', maxWidth: '1000px'}}>
+                    <section className="display-flex-flow">
+                        <div style={{width: '100%', maxWidth: '1000px'}}>
                             <Image src="/images/product/product_car_올란도.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
@@ -194,8 +194,8 @@ export default function ProductPage() {
                             </ul>
                         </div>
                     </section>
-                    <section className="display-flex">
-                        <div style={{ width: '60%', maxWidth: '1000px'}}>
+                    <section className="display-flex-flow">
+                        <div style={{ width: '100%', maxWidth: '1000px'}}>
                             <Image src="/images/product/product_car_코나.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
@@ -209,8 +209,8 @@ export default function ProductPage() {
                             </ul>
                         </div>
                     </section>
-                    <section className="display-flex">
-                        <div style={{ width: '60%', maxWidth: '1000px'}}>
+                    <section className="display-flex-flow">
+                        <div style={{ width: '100%', maxWidth: '1000px'}}>
                             <Image src="/images/product/product_car_QM6LPG.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>
@@ -224,8 +224,8 @@ export default function ProductPage() {
                             </ul>
                         </div>
                     </section>
-                    <section className="display-flex">
-                        <div style={{ width: '60%', maxWidth: '1000px'}}>
+                    <section className="display-flex-flow">
+                        <div style={{ width: '100%', maxWidth: '1000px'}}>
                             <Image src="/images/product/product_car_싼타페.png" alt="" width={1000} height={20} style={{ width: '100%', height: 'auto' }} />
                         </div>
                         <div>

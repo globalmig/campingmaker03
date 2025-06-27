@@ -15,10 +15,10 @@ export default function BlogItem({ title, contents, img, date, link }: BlogItemP
             <Link href={link}>
                 <p>{title}</p>
                 <p>{contents}</p>
-                <p>네이버 블로그 <span>{date}</span></p>
+                <p>네이버 블로그<span>{date}</span></p>
             </Link>
             <div style={{ width: '120px', height:'120px', maxWidth: '220px', maxHeight:"220px" }}>
-            <Image src={img} alt="블로그 썸네일" width={120} height={120} style={{ width: '100%', height: '100%'}}/>
+            <Image src={img} alt="블로그 썸네일" width={1000} height={1000} style={{ width: '100%', height: '100%'}}/>
             </div>
         </section>
     )

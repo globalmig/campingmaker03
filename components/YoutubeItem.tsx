@@ -13,10 +13,10 @@ export default function YoutubeItem({ title, img, link }: YoutubeItemProps) {
         <section>
             <div>
                 <div style={{ width: '100%', maxWidth: '435px' }}>
-                    <Image src={img} alt="유튜브 썸네일" width={435} height={250} style={{ width: '100%', height: 'auto'}} />
+                    <Image src={img} alt="유튜브 썸네일" width={1000} height={1000} style={{ width: '100%', height: 'auto'}} />
                 </div>
                 <div style={{ width: '50px' }}>
-                    <Image src="/icons/icon_video.png" alt="비디오 아이콘" width={50} height={50} style={{ width: "50px", height: 'auto'}} />
+                    <Image src="/icons/icon_video.png" alt="비디오 아이콘" className="hover-icon" width={50} height={50} style={{ width: "50px", height: 'auto'}} />
                 </div>
             </div>
             <div>

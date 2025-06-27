@@ -20,7 +20,7 @@ export default function ConditionalButtons() {
             }
             {showBlogButton &&
                 <button className='display-flex conditional-button'>
-                    <div style={{ width: '20px', maxWidth: '30px' }}>
+                    <div style={{ width: '20px', maxWidth: '30px', margin: "auto 0"}}>
                 <Image src="/icons/icon_talk.png" alt='블로그 바로가기 아이콘' width={20} height={20} style={{ width: '100%', height: 'auto'}}/>
                     </div>
                     <a href="https://naver.me/GMmr08Lg">캠핑메이커 블로그 바로가기</a>
