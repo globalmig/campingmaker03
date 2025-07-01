@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /inquiry
+
+User-agent: Yeti
+Disallow: /inquiry
+
+Sitemap: https://www.campingmaker.co.kr/sitemap.xml
