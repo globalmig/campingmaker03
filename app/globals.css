@@ -35,7 +35,7 @@ table {
     border: none;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
@@ -70,7 +70,8 @@ button {
     display: none;
 }
 
-.contents-more, .more-button {
+.contents-more,
+.more-button {
     background-color: transparent;
     padding: 0;
     text-align: center;
@@ -93,7 +94,7 @@ article>img {
     width: 100%;
 }
 
-article>div > h1 {
+article>div>h1 {
     font-size: 4rem;
     opacity: 0.1;
     position: absolute;
@@ -115,6 +116,17 @@ article>div button {
     margin-top: 30px;
 }
 
+.blog-conditional-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-conditional-button>button {
+    padding: 10px 5px;
+    width: 48%;
+}
+
 article>div button img {
     width: 20px;
 }
@@ -124,7 +136,7 @@ article>div button>a {
     margin: auto 10px;
 }
 
-article>div>:last-child{
+article>div>:last-child {
     margin-top: 50px;
 }
 
@@ -135,11 +147,11 @@ header>div {
     padding: 20px 5%;
 }
 
-header>div>:first-child a{
+header>div>:first-child a {
     z-index: 100;
 }
 
-header>div>:first-child img{
+header>div>:first-child img {
     width: 70px;
 }
 
@@ -209,12 +221,12 @@ nav {
     height: 100vh;
     background-color: black;
     opacity: 0.8;
-    z-index:21;
+    z-index: 21;
     transition: 0.3s;
 }
 
 nav.nav-open {
-  left: 0%;
+    left: 0%;
 }
 
 nav ul {
@@ -223,7 +235,7 @@ nav ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     padding: 100px 5%;
 }
 
@@ -234,7 +246,7 @@ nav ul li {
     text-align: center;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: white;
 }
 
@@ -275,7 +287,7 @@ footer>:first-child>:first-child>div>:first-child img {
     width: 100px;
 }
 
-footer>:first-child>:first-child>div>:last-child{
+footer>:first-child>:first-child>div>:last-child {
     justify-content: center;
     gap: 30px
 }
@@ -288,11 +300,11 @@ footer>:first-child>:first-child>div>:last-child a:hover {
     opacity: 1;
 }
 
-footer>:first-child>:first-child>div>:last-child a img{
+footer>:first-child>:first-child>div>:last-child a img {
     width: 40px;
 }
 
-footer>:first-child>:first-child>div>:last-child a:last-of-type img{
+footer>:first-child>:first-child>div>:last-child a:last-of-type img {
     padding-top: 5px;
     width: 35px;
 }
@@ -408,12 +420,12 @@ footer> :first-child>:last-child>div ul li:nth-of-type(5) {
         display: none;
     }
 
-    .conditional-button img{
+    .conditional-button img {
         width: 30px;
         margin-right: 10px;
     }
 
-    .conditional-button a{
+    .conditional-button a {
         font-size: 1.2rem;
     }
 
@@ -421,7 +433,7 @@ footer> :first-child>:last-child>div ul li:nth-of-type(5) {
         padding: 180px 0 200px;
     }
 
-    article>div >h1 {
+    article>div>h1 {
         font-size: 200px;
         top: -70px;
     }
@@ -435,8 +447,30 @@ footer> :first-child>:last-child>div ul li:nth-of-type(5) {
         margin-top: 0px;
     }
 
+    .blog-conditional-button {
+        width: 322.73px;
+        display: block;
+        position: relative;
+    }
+
+    .blog-conditional-button>button {
+        padding: 15px 30px;
+        width: 100%;
+    }
+
+    .blog-conditional-button>:first-child{
+        position: absolute;
+        top: -60px;
+        left: 0;
+    }
+
+    .blog-conditional-button> :last-child {
+        margin-top: 15px;
+    }
+
     article>div button img {
-        width: 20px;
+        width: 30px;
+        height: 30px;
     }
 
     article>div button>a {
@@ -449,17 +483,17 @@ footer> :first-child>:last-child>div ul li:nth-of-type(5) {
         margin-top: 20px;
     }
 
-    article>div>:last-child{
-    margin-top: 100px;
-}
+    article>div>:last-child {
+        margin-top: 100px;
+    }
 
     header>div {
         padding: 30px 100px;
     }
 
-    header>div>a img{
-    width: 100px;
-}
+    header>div>a img {
+        width: 100px;
+    }
 
     header>div>div>ul {
         margin: auto 0;
