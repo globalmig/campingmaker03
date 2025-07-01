@@ -77,13 +77,22 @@ export default function Footer() {
                         <Image src="/icons/icon_top.png" alt="맨 위로" width={20} height={20} style={{ width: '50%', height: 'auto' }} />
                     </div>
                 </div>
+                <Script
+                    src="//wsa.mig-log.com/wsalog.js"
+                    strategy="afterInteractive"
+                    type="text/javascript"
+                />
+                <Script
+                    id="wsa-init"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+            wsa.inflow("campingmaker.co.kr");
+            wsa_do(wsa);
+          `
+                    }}
+                />
             </footer>
-            {/* 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 */}
-            <Script type="text/javascript" src="//wsa.mig-log.com/wsalog.js"> </Script>
-            <Script type="text/javascript">
-                wsa.inflow("campingmaker.co.kr");
-                wsa_do(wsa);
-            </Script>
         </>
 
     )
