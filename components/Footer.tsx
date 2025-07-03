@@ -92,7 +92,7 @@ export default function Footer() {
           `
                     }}
                 />
-                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" strategy="afterInteractive"> </Script>
+                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" strategy="afterInteractive"/>
                 <Script
                     id="wcs-init"
                     strategy="afterInteractive"
