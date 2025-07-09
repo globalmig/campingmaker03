@@ -79,12 +79,10 @@ export default function Footer() {
                 </div>
                 <Script
                     src="//wsa.mig-log.com/wsalog.js"
-                    strategy="afterInteractive"
                     type="text/javascript"
                 />
                 <Script
                     id="wsa-init"
-                    strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
             wsa.inflow("campingmaker.co.kr");
@@ -92,10 +90,9 @@ export default function Footer() {
           `
                     }}
                 />
-                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" strategy="afterInteractive"/>
+                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js"/>
                 <Script
                     id="wcs-init"
-                    strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
             if (!wcs_add) var wcs_add = {};
