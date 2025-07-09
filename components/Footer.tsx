@@ -80,9 +80,11 @@ export default function Footer() {
                 <Script
                     src="//wsa.mig-log.com/wsalog.js"
                     type="text/javascript"
+                    strategy="beforeInteractive"
                 />
                 <Script
                     id="wsa-init"
+                    strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
             wsa.inflow("campingmaker.co.kr");
@@ -90,18 +92,20 @@ export default function Footer() {
           `
                     }}
                 />
-                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js"/>
+                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" strategy="beforeInteractive"/>
                 <Script
                     id="wcs-init"
+                    strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
-            if (!wcs_add) var wcs_add = {};
-            wcs_add["wa"] = "s_37a372b82cce";
-            if (!_nasa) var _nasa = {};
-            if (window.wcs) {
-              wcs.inflow();
-              wcs_do();
-            }
+            document.addEventListener('DOMContentLoaded', function () {
+              var _nasa = {};
+              if (!window.wcs_add) window.wcs_add = { wa: "s_37a372b82cce" };
+              if (window.wcs) {
+                wcs.inflow("campingmaker.co.kr");
+                wcs_do(_nasa);
+              }
+            });
           `,
                     }}
                 />
