@@ -92,21 +92,26 @@ export default function Footer() {
           `
                     }}
                 />
-                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" strategy="beforeInteractive"/>
+                <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" strategy="beforeInteractive" />
                 <Script
                     id="wcs-init"
                     strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
-            document.addEventListener('DOMContentLoaded', function () {
-              var _nasa = {};
-              if (!window.wcs_add) window.wcs_add = { wa: "s_37a372b82cce" };
-              if (window.wcs) {
-                wcs.inflow("campingmaker.co.kr");
-                wcs_do(_nasa);
-              }
-            });
-          `,
+      (function initWCS() {
+        var _nasa = {};
+        var maxRetry = 20;
+        var interval = setInterval(function () {
+          if (window.wcs && window.wcs_do) {
+            if (!window.wcs_add) window.wcs_add = { wa: "s_37a372b82cce" };
+            window.wcs.inflow("campingmaker.co.kr");
+            window.wcs_do(_nasa);
+            clearInterval(interval);
+          }
+          if (--maxRetry <= 0) clearInterval(interval);
+        }, 300);
+      })();
+    `
                     }}
                 />
             </footer>
