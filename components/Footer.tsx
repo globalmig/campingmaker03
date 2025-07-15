@@ -100,12 +100,36 @@ export default function Footer() {
                         __html: `
       (function initWCS() {
         var _nasa = {};
+
+        if (!window.wcs_add) window.wcs_add = {};
+        window.wcs_add["wa"] = "s_37a372b82cce";
+
         var maxRetry = 20;
         var interval = setInterval(function () {
           if (window.wcs && window.wcs_do) {
-            if (!window.wcs_add) window.wcs_add = { wa: "s_37a372b82cce" };
+          
             window.wcs.inflow("campingmaker.co.kr");
             window.wcs_do(_nasa);
+
+            var url = document.URL;
+            var _conv = {};
+
+            if (url.indexOf("/product") >= 0) {
+              _conv.type = "custom001";
+            } else if (url.indexOf("/blog") >= 0) {
+              _conv.type = "custom002";
+            } else if (url.indexOf("/youtube") >= 0) {
+              _conv.type = "custom003";
+            } else if (url.indexOf("/inquiry") >= 0) {
+              _conv.type = "custom004";
+            } else if (url.indexOf("/directions") >= 0) {
+              _conv.type = "custom005";
+            }
+
+            if (_conv.type) {
+              window.wcs.trans(_conv);
+            }
+
             clearInterval(interval);
           }
           if (--maxRetry <= 0) clearInterval(interval);
