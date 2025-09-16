@@ -2,7 +2,6 @@
 import { useEffect, useRef } from "react";
 import "./style.css";
 import "./mainVisual.css";
-
 import MainVisual from "@/components/Mainvisual";
 import Image from "next/image";
 

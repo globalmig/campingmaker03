@@ -18,6 +18,7 @@ export default function InquiryPage() {
   const [startPage, setStartPage] = useState(1);
   const [searchKeyword, setSearchKeyword] = useState("");
   const [searchType, setSearchType] = useState<"title" | "content">("title");
+  const [loading, setLoading] = useState(null);
 
   const dataPerPage = 10;
 
@@ -39,6 +40,7 @@ const fetchData = useCallback(async () => {
 
     const json = await res.json();
     setData(json.data);
+    setLoading(json.data)
     setDataCount(json.totalCount ?? json.data.length);
   } catch (err) {
     console.error("검색 또는 페이지 데이터 로딩 오류:", err);
@@ -64,12 +66,17 @@ const fetchData = useCallback(async () => {
       content="에 관련하여 언제든지 문의해주세요."
     >
       <div className="inquiry">
+        {(!loading) ? <ul>
+          <li className="no-post">게시글을 불러오는 중입니다.</li>
+        </ul>
+        :
         <InquiryList
           data={data}
           startPage={startPage}
           dataPerPage={dataPerPage}
           dataCount={dataCount}
         />
+        }
         {data &&
         <Pagination
           dataCount={dataCount}

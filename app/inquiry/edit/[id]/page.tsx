@@ -14,7 +14,7 @@ interface InquiryForm {
 
 export default function InquiryEditPage() {
   const router = useRouter();
-  const { id } = useParams(); // route param에서 id 가져오기
+  const { id } = useParams();
   const [form, setForm] = useState<InquiryForm>({
     title: '',
     name: '',
